@@ -1,4 +1,4 @@
-# Iteration Control Structure - Quiz
+Iteration Control Structure - Quiz
 
 Q1. What will be the output of the below program?
 javaint i = 1, j = 10;
@@ -148,3 +148,298 @@ javaTester(int num1, int num2) {
     num2 = num2;
 }
 Answer: c) 0 0
+
+Memory Management - Quiz
+
+Q1. Which of the following statements are true?
+Answer:
+
+a) You cannot be certain at what point of time garbage collection will occur.
+c) An object will be eligible for garbage collection after the execution of the method is over.
+
+
+Q2. How many objects and references have been created?
+javaStudent student3 = student1;
+Student student4 = null;
+Answer: c) objects: 2, references: 4
+
+Q3. What will be the output of the following code?
+javaTrainee trainee = null;
+System.out.println(trainee.id);
+Answer: c) runtime error
+
+Q4. How many objects will be eligible for garbage collection?
+javastudent3 = null;
+student1 = student3;
+Answer: c) 2
+
+Q5. Which statement is true after executing Line 1?
+javaaccount1 = new Account(); // Line 1
+Answer: b) account1 and account2 are pointing to different objects
+
+Q6. How many objects will be eligible for garbage collection?
+javaaccount2 = account1 = null;
+Answer: a) 3
+
+Encapsulation, Abstraction and Access Modifiers - Quiz
+
+
+Q1 of 4
+
+What is the output of the below code?
+
+class A {
+	private void displayMessage() {
+		System.out.println("Welcome");
+	}
+}
+
+public class B {
+	public static void main(String args[]) {
+		A message = new A();
+		message.displayMessage();
+	}
+}
+ 
+
+Welcome
+null
+No output
+Compilation error: The method displayMessage() from type A is not visible
+Q2 of 4
+
+What is the output of the below code?
+
+class A {
+	public void displayMessage() {
+		System.out.println("Welcome");
+	}
+}
+
+public class B {
+	public static void main(String args[]) {
+		A message = new A();
+		message.displayMessage();
+	}
+}
+ 
+
+Welcome
+null
+No output
+Compilation error: The method displayMessage() from type A is not visible
+Q3 of 4
+
+Which of the following statements are correct?
+
+i. public methods of a class can be accessed anywhere in a program
+
+ii. private methods of a class can be accessed only inside the class
+
+iii. members created without any access modifier will have default access
+
+Only i and ii
+All i, ii and iii
+Only i and iii
+Only ii and iii
+Q4 of 4
+
+What is the output of the below code?
+
+class Purchase {
+	private String mobileName;
+	private int price;
+	private int stock;
+
+	public void purchaseMobile() {
+		stock = stock - 1;
+	}
+
+	public String getMobileName() {
+		return mobileName;
+	}
+
+	public void setMobileName(String mobileName) {
+		this.mobileName = mobileName;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+}
+
+public class Tester {
+	public static void main(String[] args) {
+		Purchase mobile = new Purchase();
+		mobile.setMobileName("Moto");
+		mobile.setPrice(200);
+		mobile.purchaseMobile();
+		System.out.println(mobile.getStock());
+	}
+}
+ 
+
+Compilation error: stock is not initialized
+null
+0
+-1
+
+
+String - Quiz
+
+Q1. What will be the output of the below code?
+javastr.charAt(str.length())
+Answer: d) runtime error: index out of bounds
+
+Q2. What will be the output of the below code?
+javaString num = "10";
+int n = 20;
+System.out.println(num + n);
+Answer: b) 1020
+
+Q3. What will be the output of the below code?
+javaSystem.out.println(s1 = s2);
+Answer: b) abcd
+
+Q4. What will be the output of the below code?
+javaSystem.out.println(s1.equals(s2));
+System.out.println(s1 == s2);
+Answer: a) true false
+
+Q5. What will be the output of the below code?
+javaSystem.out.println(p1.equals(passengerFirstName));
+System.out.println(p1.equalsIgnoreCase(passengerFirstName));
+Answer: c) false true
+
+Q6. What will be the output of the below code?
+javainput.toUpperCase();
+System.out.println(input);
+Answer: c) welcome to string functions
+
+
+Array - Quiz
+
+Q1. Which of the following are valid array declarations?
+Answer: c) 2, 3, 5, 7
+
+Q2. Which of the following statements is/are valid?
+Answer:
+
+a) int score[][] = new int[2][];
+b) int score[][] = new int[2][2];
+d) int score[][] = new int[2][]; score[0] = new int[2];
+
+
+Q3. What will be the output of the below code?
+javan = arr[arr[n] / 2];
+System.out.println(arr[n] / 2);
+Answer: d) 1
+
+Q4. What will be the output of the below code?
+javaif (sale > average) count++;
+break;
+Answer: c) Average sales: 10.333333 Sales above average: 0
+
+Q5. What will be the output of the below code?
+javaif (a[i][j] % 2 == 0) break;
+sum += a[i][j];
+Answer: b) sum = 11
+
+Q6. What will be the output of the below code?
+javaif (i % 3 != 0) { --i; }
+System.out.println(a[i]);
+Answer: c) 19 17 15
+
+Q7. What will be the output of the below code?
+javafor (int j = 1; j < inputArray[i].length - 1; j++)
+    total *= inputArray[i][j];
+Answer: a) Result = 72
+
+Q8. What will be the output of the below code?
+javaif (i == j) continue;
+total += numbers[i][j];
+Answer: d) Result = 31
+
+Code Analysis - Quiz
+
+Q1. Which of the following code snippets do not have any naming convention violation? Answer:
+
+a)public class PMDDemo {...}
+d) public class PmdDemo {...}
+e) public void pmdDemo() {...}
+
+
+Static - Quiz
+
+Q1. How many static variables, local variables and instance variables are present?
+javaprivate static int numberOfCars = 0;
+private String vehicleNumber, color;
+public void display(String name)
+Answer: a) static variables: 1; instance variables: 2; local variables: 1
+
+Q2. Which of the following is/are correct?
+Answer:
+
+c) Static blocks get executed only once.
+d) Static variables and methods can be accessed without creating an object of the class.
+
+
+Q3. Choose the correct option based on the code given below.
+javastatic { name = "john"; } // line 1
+Answer: a) Compilation error in Line 1 as a non-static member cannot be accessed inside a static block.
+
+Q4. What will be the output of the code given below?
+javaprivate static int id;
+id = ++counter;
+Answer: b) 3 3 3
+
+Q5. Predict the output of the code given below.
+javaPrinter p = null;
+p.display(...);
+Answer: c) Static block in Tester class; In main; Static block in Printer class; The value of sample variable is: 2
+
+Q6. What will be the output of the below code?
+javapublic static void main(String args[]) {
+    System.out.println(this.var);
+}
+Answer: c) compilation error: cannot use 'this' inside main
+
+Aggregation - Quiz
+
+Q1. What will be the output of the below code?
+javaBuilding b = new Building();
+// calls Building() which calls new Room(20)
+Answer: c) Room created 
+
+
+Association - Quiz
+
+Q1. What will be the output of the code given below?
+javaSystem.out.println("Student appeared for exam using PC Id: " + c.id);
+Answer: d) compilation error: id is private and cannot be accessed directly in another class
+
+Q2. Replace //missing code so that findSum() calculates the sum of all objects of array b.
+javafor (B item : b) { // missing code }
+Answer: b) sum += item.num
+
+Q3. What will be the output of the below code?
+javap1.updateCabin(c2);
+// both p1 and p2 point to same c1 object
+this.cabin.cabinNumber = c.cabinNumber;
+Answer: a) 122 122
+
+Q4. Which of the below relations can be bidirectional?
+Answer: b) Association

@@ -466,3 +466,175 @@ a) If constructor for a class is not defined, then the compiler automatically pr
 b) The name of the constructor should be same as the class name.
 c) The parameterless constructor of the parent class is invoked implicitly by the child class constructors if super() is not explicitly used in the child class constructor.
 d) A call to a parent class constructor must be the first statement inside the child class constructor.
+
+
+Method Overloading - Quiz
+
+Q1. What will be the output of the following code?
+javatester.evaluate(4, 2.5f);
+// int and float -> matches (float, float)
+Answer: b) Second evaluate method invoked 6.5
+
+Q2. What is the output of the following code?
+javatester.evaluate(4.5, 2.5);
+// double arguments, no matching method
+Answer: b) Compilation error: The method evaluate(int, int) in the type Tester is not applicable for the arguments (double, double)
+
+Q3. Which of the following are overloaded methods?
+Answer: b) Only a and c
+
+a is valid: different number of parameters
+b is invalid: same method signature, only return type differs
+c is valid: different order of parameter types
+
+Constructor Overloading - Quiz
+
+Q1. Which of the following statements is/are correct?
+Answer: a) Only (i), (iii) and (iv)
+
+Q2. What will be the output of the code given below?
+javaEmployee employee1 = new Employee("John", 101); // city = null
+Employee employee2 = new Employee();             // name = null, empId = 0
+Answer: b) John 101 null null 0 New York
+
+Q3. What will be the output of the code given below?
+javaEmployee(String name, int empId) {
+    this(); // calls Employee() which sets city = "New York"
+    this.name = name;
+    this.empId = empId;
+}
+Answer: c) John 101 New York null 0 New York Sonnet 4.6Extended
+
+Method Overriding - Quiz
+
+Q1. What will be the output of the following code snippet?
+javaPerson person = new Student();
+person.print(); // runtime polymorphism, calls Student's print()
+Answer: a) In Person class In Student class Student name John
+
+Q2. What will be the output of the following code snippet?
+javaPerson c = new Customer(20000);
+c.getDetails(); // calls Customer's getDetails()
+Answer: b) Maddy 34 20000
+
+Q3. What will be the output of the following code snippet?
+javaBike hondaBike = new Honda();
+hondaBike.speedlimit; // variable, no polymorphism, refers to Bike's variable
+Answer: a) 90 150 90
+
+Q4. Predict the output of the code given below.
+javaBank bank = new Bank();
+bank.getBankName(); // private method, no overriding
+Answer: b) Bank
+
+Q5. What will be the output of the following code snippet?
+javaa.method1() + c.method1() + c.method2()
+// 20 + 30 + 20 = 70
+Answer: c) 70
+
+Q6. What will be the output of the following code snippet?
+javasuper(10); // sets Loan's interestRate = 10
+interestRate = super.interestRate; // = 10
+Answer: b) Request for loan Request for home loan 10
+
+Q7. Can you apply more than one annotation on any method?
+Answer: a) Yes
+
+final keyword - Quiz
+
+Q1. Identify the correct declaration of a final variable.
+Answer: b) private final double PI = 3.14
+
+Q2. What will be the output of the below code?
+javafinal int num = 100;
+this.num = 50; // trying to change final variable
+Answer: c) Compilation error as the value of a final variable cannot be changed
+
+
+Abstract - Quiz
+
+Q1. Which of the following class creation prevents creating a child class of the Example class?
+Answer: c) public final class Example {}
+
+Q2. Choose the correct statements from the statements given below.
+Answer:
+
+a) Abstract classes can have concrete methods.
+c) Concrete sub classes of an abstract class must implement all the abstract methods.
+d) Abstract classes can have abstract methods.
+e) Subclasses of abstract classes may or may not be abstract.
+
+
+Q3. Predict the output of the following code.
+javaB obj = new B();
+obj.disp(); // calls concrete method from parent class A
+Answer: b) Concrete method of parent class
+
+Interface - Quiz
+
+Q1. What will happen on executing the code given below?
+javaBankOperations subBranch = new SubBranch();
+subBranch.deposit();
+Answer: d) Code will get executed successfully and display "Amount deposited"
+
+Q2. Which of the following is/are true for classes and interfaces?
+Answer:
+
+c) "Account extends SavingsAccount" is correct if "Account and SavingsAccount both are either interfaces or classes"
+d) "SavingsAccount implements Account" is correct if and only if "Account is an interface" and "SavingsAccount is a class"
+ Sonnet 4.6Extended
+
+Exception - Quiz
+
+Q1. What will be the output of the below program?
+javacatch (ParentClass p) { ... }
+catch (ChildClass e) { ... } // unreachable
+Answer: d) Compilation error because the catch block of a parent class exception must appear after the catch block of a child class exception
+
+Q2. Which statements could be inserted to allow the code to compile and run?
+Answer:
+
+a) throw new ArrayIndexOutOfBoundsException();
+c) throw new NullPointerException();
+
+
+Q3. What will be the output of the below program?
+javadisplay(); // throws RuntimeException, caught by catch(Exception e)
+Answer: c) main inside display() caught finally end
+
+Q4. What will be the output of the below program?
+javathrow new Error(); // Error is not caught by Exception, caught by Throwable
+Answer: d) CDE
+
+Q5. What will be the output of the below program?
+javathrow new RuntimeException(); // unchecked exception, no throws declaration needed
+Answer: a) An exception of type RuntimeException will be thrown.
+
+
+Package - Quiz
+
+Q1. Consider the below package structures and choose the correct options:
+Answer:
+a) Class B can access variable b of A
+b) Class B can access variable c of A (same package, default access)
+e) Class C can access variable d of A (public access)
+f) Class D can access variable b of A (different package but extends A, protected access allowed)
+
+
+Q2. What are the possible access modifiers for the display() method in class B?
+Answer:
+
+c) public
+d) protected
+
+
+Q3. Which of the following statements is/are correct?
+Answer:
+
+a) public methods of a class can be accessed anywhere in a program.
+b) private methods of a class can be accessed only within the class.
+d) protected methods of a class can be inherited by sub classes and can become public in the sub classes.
+
+
+Q4. An _______________ statement can be used to access the classes and interfaces of a different package.
+Answer: b) import

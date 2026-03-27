@@ -699,3 +699,33 @@ Q7. What will be the output for divide(10)?
 Output: 0101
 Answer: b) 0101
 
+Regular Expression - Quiz
+
+Q1. Which strings match: Hello (World|Program) .?
+Answer:
+a) Hello World !
+d) Hello Program
+f) Hello Program .
+
+
+Q2. Which strings match: [0-9]+ Pre?mium or{3}der
+Answer:
+a) 3445 Premium orrrder
+b) 57696 Prmium orrrder
+
+
+Q3. Which strings match: [\\w]+ [\\w]+
+Answer: a) Steve FoodOrder_12
+
+Q4. Which strings match: [\\D]+-[A-Z]+Ab\\*[0-9]{3,5}
+Answer: d) Steve-FOODORDERAb*1123
+
+Q5. Which regex matches Steve@abc.co.in?
+Answer: 
+a) \w+@abc\.(co\.in)
+c) [\\w+@]+[\\D]+
+
+Q6. Which regex matches CD*56FT*A*54?
+Answer: d) \w{2}\\d{2}\w{2}\\w{1}\*\d{2}
+\w{2}=CD, \*=*, \d{2}=56, \w{2}=FT, \*=*, \w{1}=A, \*=*, \d{2}=54
+

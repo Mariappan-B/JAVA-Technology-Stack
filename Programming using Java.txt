@@ -443,3 +443,26 @@ Answer: a) 122 122
 
 Q4. Which of the below relations can be bidirectional?
 Answer: b) Association
+
+**Inheritance - Quiz**
+
+Q1. Predict the output of the following code.
+javaPremiumCustomer premiumCustomer = new PremiumCustomer();
+Answer: a) Customer Regular Customer Premium Customer
+
+Q2. In the constructor of DigitalCamera class, the call to the base class constructor ____________.
+Answer: b) must be made in the first line of the constructor
+
+Q3. Predict the output of the following code.
+javasuper(var2); // var2=20
+this.var3 = 40;
+sum = getVar1() + getVar2() + var3; // 10+20+40
+Answer: b) Result: 70
+
+Q4. Which of the following statements are true about constructors in Java?
+Answer:
+
+a) If constructor for a class is not defined, then the compiler automatically provides a default parameterless constructor.
+b) The name of the constructor should be same as the class name.
+c) The parameterless constructor of the parent class is invoked implicitly by the child class constructors if super() is not explicitly used in the child class constructor.
+d) A call to a parent class constructor must be the first statement inside the child class constructor.

@@ -638,3 +638,64 @@ d) protected methods of a class can be inherited by sub classes and can become p
 
 Q4. An _______________ statement can be used to access the classes and interfaces of a different package.
 Answer: b) import
+
+Unit Testing and Code Coverage - Quiz
+
+Q1. Which of the following is/are correct?
+Answer:
+
+a) A unit test case is a part of code which ensures that another part of code (method) works as expected.
+b) A formal written unit test case is characterized by a known input and by an expected output, which is decided before the test is executed.
+d) A unit test case compares the expected output with actual output.
+
+
+Q2. Which of the following is a valid way of declaring an Expected Exception object?
+Answer: b) @Rule public ExpectedException expectedException = ExpectedException.none();
+
+Q3. Select the annotations that are used for creating test suites.
+Answer:
+
+a) @RunWith(Suite.class)
+b) @Suite.SuiteClasses()
+ Sonnet 4.6Extended
+
+
+Recursion - Quiz
+
+Q1. What changes should be made to the method to work correctly?
+Answer: d) replace Line2 with return (num + sum(num-1))
+
+Q2. Which of the below methods correctly implement the formula?
+Answer:
+c) public int square(int n) { if(n==1) return 1; else return (square(n-1)+(2*n-1)); }
+d) public int square(int n) { if(n==0) return 0; else return (square(n-1)+(2*n-1)); }
+
+
+Q3. What does the below method do?
+javareturn (x * fun(x, y - 1)); // base case y==0 returns 1
+Answer: b) x^y
+
+Q4. What must be written in place of missing code?
+javareturn (num1 + multiply(num1, num2 - 1));
+**Answer: b) num2==0**
+
+Q5. How many times will divide() be called for num = 4321?
+divide(4321) → divide(432) → divide(43) → divide(4) → divide(0)
+= 5 times total
+Answer: a) 5
+
+Q6. What will be the output for num1=5 and num2=1?
+calc(5,1) = 5+1+calc(4,2)
+calc(4,2) = 4+2+calc(3,3)
+calc(3,3) = 0  (num2 == num1)
+= 6 + 6 + 0 = 12
+Answer: c) 12
+
+Q7. What will be the output for divide(10)?
+10%2=0 → divide(5)
+5%2=1  → divide(2)
+2%2=0  → divide(1)
+1%2=1  → divide(0) → returns 0
+Output: 0101
+Answer: b) 0101
+

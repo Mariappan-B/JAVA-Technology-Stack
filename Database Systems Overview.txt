@@ -1,29 +1,34 @@
+<---------------Quiz - Database Introduction-------------------->
 Q1) Answer:
 b) Collection of programs to access data
 A DBMS includes both the interrelated data and the programs used to access it.
+
 Q2) Answer: b) Database application and Database
 DBMS acts as a middleware between the application and the actual database.
+
 Q3) Answer:
 a) Data redundancy and inconsistency
 b) Difficulty in fetching data
 c) Data isolation is not present
 File systems suffer from redundancy, difficulty in querying data, and poor data isolation. High cost is a DBMS concern, not file systems.
+
 Q4) Answer:
 a) Maintain accuracy of data
 b) Utilities for performance analysis and logging
 c) Ensure modifications are successful or not done at all
 d) Recovery mechanism for data
 DBMS provides data accuracy, logging, atomicity (all-or-nothing transactions), and crash recovery.
+
 Q5) Answer: c) Data can be accessed by multiple programs
 DBMS supports concurrent shared access, unlike file systems which struggle with multi-user scenarios.
+
 Q6) Answer:
 a) Protect data from system crash
 c) Authorized access
 DBMS provides crash protection (durability) and access control (authorization). It is not necessarily low cost, and it actually reduces application dependence on storage.
 
+<---------------------------Quiz - Functions and Relational Model----------------------------->
 
-Show more
-6:46 PM
 Q1. A relational database consists of a collection of Answer: a) Tables A relational database organizes data into tables (also called relations).
 
 Q2. A relationship among a set of values in a table is represented by a Answer: c) Row Each row (tuple) represents a relationship among a set of values in a table.
@@ -38,5 +43,91 @@ c) 4
 Q6. What is the degree of the above relation SalesMan(SId, SName, Location)? Answer: a) 3 Degree refers to the number of attributes (columns) in a relation. SalesMan has 3 attributes: SId, SName, and Location.
 
 
+<-------------------- Quiz - Data Integrity-------------------------->
 
 
+Q1. The relationship between the two relations is created using __________
+Answer: c) Foreign key
+
+Q2. Which statements are FALSE about Primary key?
+Answer:
+
+b) There can be more than one Primary key for a table.
+d) Columns with string (Char/Varchar2) data types cannot be made Primary key because they are large.
+
+
+Q3. Suggest the best Primary key for Customer entity.
+Answer: a) CustId
+CustId is preferred as it is numeric, short, and does not change over time unlike Email or ContactNo.
+
+Q4. Identify the Candidate key for the RechargePlan table.
+Answer: d) Operator, Plans
+
+Q5. Identify the Primary key for the RechargePayment table.
+Answer: c) RechargeId
+
+Q6. Identify the Foreign key for the RechargePayment table.
+Answer: d) Operator, Plans
+Operator and Plans together reference the RechargePlan table's candidate key, making them the Foreign key in RechargePayment.
+
+<----------------Quiz - Entity and Relationship--------------->
+
+Q1. Exactly one instance related to zero or more instances — this is a "one to zero-or-many" relationship.
+Answer: B
+
+Q2. In a many to one relationship, the primary key acts as foreign key on which side?
+Answer: b) On the side where many relationship is defined
+
+Q3. How many tables does a many to many relationship result in?
+Answer: b) Three
+A junction/bridge table is created in addition to the two entity tables to resolve the many-to-many relationship.
+
+<----------------Quiz - DBMS Basics---------------->
+
+Q1. Identify the Primary key for Club relation.
+Answer: a) ClubId
+
+Q2. Identify the Primary key for Member relation.
+Answer: d) {ClubId, MemberId}
+
+Q3. Identify the Foreign key for Club relation.
+Answer: a) Foreign key does not exist
+
+Q4. Identify the Foreign key for Member relation.
+Answer: a) ClubId
+
+Q5. Identify the Primary key for Participant relation.
+Answer: a) ParticipantId
+
+Q6. Identify the Primary key for Assessment relation.
+Answer: d) {CourseId, ParticipantId}
+
+Q7. Identify the Primary key for Course relation.
+Answer: a) CourseId
+
+Q8. Identify the Foreign key for Participant relation.
+Answer: a) Foreign key does not exist
+
+Q9. Identify the Foreign key(s) for Assessment relation.
+Answer:
+
+b) CourseId
+d) ParticipantId
+
+
+Q10. Identify the Foreign key(s) for Course relation.
+Answer: d) Prerequisite
+Prerequisite references CourseId in the same Course table (self-referencing).
+
+Q11. Which option best suits the context?
+Answer: d) CustomerId, EmailAddress can individually become candidate keys and CustomerId becomes the primary key
+
+Q12. Which two options best suit the context?
+Answer:
+
+a) CustomerId and GameId present in gaming table can take duplicate values.
+c) CustomerId and GameId are foreign keys present in child table gaming, referring to CustomerId and GameId, the primary keys present in parent tables, Customer and Game respectively.
+
+
+Q13. Choose whether the decision is True or False.
+Answer: d) False. An attribute in a table/relation can reference another attribute in the same table/relation and this is called Self Referencing Foreign Key

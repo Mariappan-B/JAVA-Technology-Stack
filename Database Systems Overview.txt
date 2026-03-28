@@ -1,0 +1,42 @@
+Q1) Answer:
+b) Collection of programs to access data
+A DBMS includes both the interrelated data and the programs used to access it.
+Q2) Answer: b) Database application and Database
+DBMS acts as a middleware between the application and the actual database.
+Q3) Answer:
+a) Data redundancy and inconsistency
+b) Difficulty in fetching data
+c) Data isolation is not present
+File systems suffer from redundancy, difficulty in querying data, and poor data isolation. High cost is a DBMS concern, not file systems.
+Q4) Answer:
+a) Maintain accuracy of data
+b) Utilities for performance analysis and logging
+c) Ensure modifications are successful or not done at all
+d) Recovery mechanism for data
+DBMS provides data accuracy, logging, atomicity (all-or-nothing transactions), and crash recovery.
+Q5) Answer: c) Data can be accessed by multiple programs
+DBMS supports concurrent shared access, unlike file systems which struggle with multi-user scenarios.
+Q6) Answer:
+a) Protect data from system crash
+c) Authorized access
+DBMS provides crash protection (durability) and access control (authorization). It is not necessarily low cost, and it actually reduces application dependence on storage.
+
+
+Show more
+6:46 PM
+Q1. A relational database consists of a collection of Answer: a) Tables A relational database organizes data into tables (also called relations).
+
+Q2. A relationship among a set of values in a table is represented by a Answer: c) Row Each row (tuple) represents a relationship among a set of values in a table.
+
+Q3. The set of permitted values of an attribute is called Answer: c) Domain Domain defines the set of all possible valid values for an attribute.
+
+Q4. The attribute value that is currently unknown is Answer: b) NULL NULL represents a missing or unknown value, it is not zero or empty string.
+
+Q5. What is the cardinality of the above relation SalesMan(SId, SName, Location)? Answer: 
+c) 4
+
+Q6. What is the degree of the above relation SalesMan(SId, SName, Location)? Answer: a) 3 Degree refers to the number of attributes (columns) in a relation. SalesMan has 3 attributes: SId, SName, and Location.
+
+
+
+

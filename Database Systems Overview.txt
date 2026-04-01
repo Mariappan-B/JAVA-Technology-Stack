@@ -131,3 +131,237 @@ c) CustomerId and GameId are foreign keys present in child table gaming, referri
 
 Q13. Choose whether the decision is True or False.
 Answer: d) False. An attribute in a table/relation can reference another attribute in the same table/relation and this is called Self Referencing Foreign Key
+
+<-----------------Quiz - Functional Dependency-------------------->
+
+Q1. A functional dependency is a relationship between or among
+Answer: c) Attributes
+
+Q2. Which functional dependency types are present?
+Answer:
+
+a) Full functional dependency — StaffNo, BranchNo -> StaffName, BranchName, Position, DOB
+b) Partial functional dependency — StaffNo -> StaffName, Position, DOB and BranchNo -> BranchName (attributes depend on part of the composite key)
+
+
+Q3. Which functional dependency types are present?
+Answer:
+
+a) Full functional dependency — EmpNo -> EName, Salary, DeptNo, DName
+c) Transitive functional dependency — EmpNo -> DeptNo -> DName (DName depends on DeptNo which depends on EmpNo)
+
+
+Q4. Identify the candidate key(s) for R(A, B, C, D).
+Answer: b) {A}, {C, D}
+
+A alone determines B, C, D — so {A} is a candidate key.
+C, D together determine A, B — so {C, D} is a candidate key.
+{A, D} is not minimal since {A} alone works.
+
+
+Q5. A -> B also means that B -> A. True or False?
+Answer: b) False
+Functional dependencies are not reversible. A -> B means A determines B, but B does not necessarily determine A.
+
+
+<----------------------Quiz- Normalization------------------------->
+
+Q1. The database design prevents some data from being stored due to _______
+Answer: b) Insertion anomalies
+
+Q2. A relation is in 2NF if:
+Answer: d) All of the above
+
+Non-key attributes fully depend on candidate key.
+Partial dependencies are moved to another relation.
+It must already be in 1NF.
+
+
+Q3. If A->B and B->C, then the relation cannot be:
+Answer: d) 3NF
+A->B->C represents a transitive dependency, which violates 3NF. The relation can still be in 1NF and 2NF.
+
+Q4. What is the highest normal form of the Sale relation?
+Answer: d) 1NF
+
+Product -> Vendor is a partial dependency (Product is only part of the composite key), which violates 2NF.
+Vendor -> VendorCity is a transitive dependency, which violates 3NF.
+Therefore the highest normal form is 1NF.
+
+
+<---------------------Quiz - SQL Commands----------------------->
+
+Q1. Which are classifications of SQL?
+Answer:
+
+a) Data Definition Language
+b) Data Manipulation Language
+
+
+Q2. Which command should Maria use to change marks?
+Answer: c) Update
+
+Q3. Command classification for ALTER?
+Answer: b) DDL
+
+Q4. Command classification for REVOKE?
+Answer: a) DCL
+
+Q5. To save database changes permanently, which classification should be used?
+Answer: d) TCL
+
+Q6. Command classification for INSERT?
+Answer: c) DML
+
+Q7. Command classification for TRUNCATE?
+Answer: b) DDL
+
+Q8. Match the following commands and descriptions:
+CommandDescriptionUPDATEUsed to change existing data in tablesALTERModifies existing database objects like tablesREVOKERemove access to database objects like tables from usersCOMMITSave database changes and end transactionINSERTAdd new rows to database tablesTRUNCATEEmpty a table by deleting all rows
+
+
+<--------------------Quiz - SQL Data Types---------------------->
+
+Q1. Which data type stores weight with accuracy of 1 gram (max 635kg)?
+
+Max value: 635.000, needs 3 decimal places for grams, 3 digits before decimal.
+
+Answer: d) NUMBER(6,3)
+
+Q2. What is the maximum value that can be stored in NUMERIC(4,2)?
+
+Total 4 digits, 2 after decimal = 99.99
+
+Answer: c) 99.99
+
+Q3. Which statements are TRUE?
+Answer:
+
+a) Scale denotes number of digits allowed after decimal point.
+c) SQL performs rounding if user attempts to store a value that has higher scale than the data type.
+
+
+Q4. Most suitable data type for Price (e.g. 200.21)?
+Answer: c) NUMBER(5,2)
+
+Q5. Most suitable data type for Meeting_Time (date and time)?
+Answer: b) TIMESTAMP
+
+Q6. Most suitable data type for Profile_Image?
+Answer: b) BLOB
+
+Q7. Most suitable data type for Book_Title (text string)?
+Answer: a) VARCHAR2(50)
+
+Q8. Most suitable data type for Gender (single character M or F)?
+Answer: c) CHAR(1)
+
+Q9. Most suitable data type for PIN_Code (six digit numeric)?
+Answer: c) NUMBER(6)
+
+
+<-------------------Practice Quiz : SQL Basics----------------------->
+
+Q1. Which values can be inserted into NUMBER(4,1)?
+
+Total 4 digits, 1 after decimal, so max 999.9
+i. 99.5 ✓ | ii. 999.98 ✗ | iii. 9999.9 ✗ | iv. 98.47 rounds to 98.5 ✓ | v. 9.7856 rounds to 9.8 ✓
+
+Answer: b) i, iv and v
+
+Q2. Appropriate datatype for variable length unicode characters up to 8000?
+Answer: d) CLOB
+
+Q3. Correct datatype to store age of employees?
+Answer: c) INTEGER
+
+Q4. How many DML statements among: CREATE, UPDATE, TRUNCATE, DELETE, ROLLBACK, REVOKE?
+
+UPDATE ✓ DML | DELETE ✓ DML | CREATE=DDL | TRUNCATE=DDL | ROLLBACK=TCL | REVOKE=DCL
+
+Answer: b) 2
+
+Q5. Appropriate data types for name, dob, gender?
+Answer:
+
+name → VARCHAR2(50)
+dob → DATE
+gender → CHAR(1)
+
+
+Q6. Appropriate data type for recorddate (date and time)?
+Answer: TIMESTAMP
+
+Q7. Appropriate data types for patientid and photo?
+Answer: c) NUMBER(6), BLOB
+
+Q8. Appropriate data type for avgrating (1-5, rounded to 2 decimal places)?
+
+Max value: 5.00, needs 3 total digits, 2 after decimal
+
+Answer: c) NUMBER(3,2)
+
+Q9. Evaluate: NOT(5!=5) OR (DEPT NOT IN('DEF','XYT') AND SALARY BETWEEN 30000 AND 50000)
+
+NOT(5!=5) = NOT(false) = true
+Since first part is true, entire OR expression = true
+
+Answer: a) True
+
+<----------------------Quiz - Create Table------------------------->
+
+Q1. Which statement is TRUE regarding CREATE TABLE statement?
+Answer: c) Attributes allow NULL values unless NOT NULL clause is provided
+By default, all columns in a table accept NULL values. To prevent NULL values, the NOT NULL constraint must be explicitly specified during table creation.
+
+<------------------Quiz - Create Table with Constraints------------------->
+
+Q1. Which requirement can be implemented using a referential integrity constraint?
+Answer: c) Customer information must be known before anything is sold to him/her
+Referential integrity (Foreign Key) ensures that a record in a child table must have a corresponding record in the parent table.
+
+Q2. Which statements are TRUE?
+Answer:
+
+b) A Unique constraint allows multiple rows to have NULL value.
+d) Referential integrity constraint allows NULL value.
+
+
+Q3. Which requirements can be implemented using a CHECK constraint?
+Answer:
+
+b) Age of the customer must be greater than 21.
+c) Customer must have a residence in an Asian Country.
+
+CHECK constraint validates data against a condition or a list of values.
+
+Q4. Which constraint can be defined only at the column level?
+Answer: b) NOT NULL
+NOT NULL constraint can only be defined at the column level, whereas UNIQUE, DEFAULT, and PRIMARY KEY can be defined at both column and table level.
+
+
+<-------------------Quiz - Constraints and Create table----------------------->
+
+It seems the code snippets and images for Q1 and Q3 are not visible. However based on the answer options, here are the answers:
+Q1. What will be the output of the following command?
+Answer: c) Error will be thrown 
+
+Q2. Combination of CustId and AccountNo should be UNIQUE.
+Answer: d) Put a table level UNIQUE constraint involving both the columns
+sqlCREATE TABLE Customer (
+    CustId      INTEGER,
+    AccountNo   INTEGER,
+    CustName    VARCHAR2(50),
+    CONSTRAINT Customer_Uk UNIQUE (CustId, AccountNo)
+);
+A table level UNIQUE constraint is needed when uniqueness is required across a combination of columns.
+
+Q3. Which DDL statement will create a table?
+Answer: a
+The correct syntax to create a table is:
+sqlCREATE TABLE tablename AS
+SELECT * FROM customer
+WHERE 1 = 2;
+This creates a new table with the same structure as customer but with no data (since condition is false).
+
+Note: Please share the actual code snippets or images for Q1 and Q3 for more accurate answers.

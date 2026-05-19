@@ -43,7 +43,6 @@ Answer: c) 16 6
 
 Q7. What will be the output of the below program?
 
-
 javaint counter = 0;
 while (counter <= 7) {
     if (counter % 2 == 0) { counter += 1; continue; }
